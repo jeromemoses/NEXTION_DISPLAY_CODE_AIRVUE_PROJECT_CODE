@@ -1,0 +1,2 @@
+temp.val=tempV.val
+hum.val=humV.val

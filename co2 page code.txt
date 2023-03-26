@@ -1,0 +1,23 @@
+co2.val=co2V.val
+temp.val=tempV.val
+hum.val=humV.val
+// CO2 Sensor
+if(co2V.val<=700) // Good
+{
+  co2.pco=1418 // Green color
+}else if(co2V.val>700&&co2V.val<=1000) // Satisfactory
+{
+  co2.pco=38538 // Light Green color
+}else if(co2V.val>1000&&co2V.val<=1500) // Moderate
+{
+  co2.pco=65504 // Yellow color
+}else if(co2V.val>1500&&co2V.val<=2000) // Poor
+{
+  co2.pco=65024 // Orange  color
+}else if(co2V.val>2000&&co2V.val<=5000) // Very Poor
+{
+  co2.pco=63488 // Red  color
+}else if(co2V.val>5000) // Hazardous
+{
+  co2.pco=49152 // Maroon  color
+}

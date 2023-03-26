@@ -1,0 +1,23 @@
+pm1.val=pm1V.val
+temp.val=tempV.val
+hum.val=humV.val
+// pm1 Sensor
+if(pm1V.val<=4) // Good
+{
+  pm1.pco=1418 // Green color
+}else if(pm1V.val>4&&pm1V.val<=8) // Satisfactory
+{
+  pm1.pco=38538 // Light Green color
+}else if(pm1V.val>8&&pm1V.val<=12) // Moderate
+{
+  pm1.pco=65504 // Yellow color
+}else if(pm1V.val>12&&pm1V.val<=14) // Poor
+{
+  pm1.pco=65024 // Orange color
+}else if(pm1V.val>14&&pm1V.val<=17) // Very Poor
+{
+  pm1.pco=63488 // Red  color
+}else if(pm1V.val>17) // Hazardous
+{
+  pm1.pco=49152 // Severe //meroon
+}

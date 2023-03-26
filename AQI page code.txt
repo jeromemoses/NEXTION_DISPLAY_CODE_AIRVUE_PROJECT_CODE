@@ -1,0 +1,23 @@
+aqi.val=aqiV.val
+temp.val=tempV.val
+hum.val=humV.val
+// AQI
+if(aqiV.val<=50) // Good
+{
+  aqi.pco=1418 // Green color
+}else if(aqiV.val>50&&aqiV.val<=100) // Satisfactory
+{
+  aqi.pco=38538 // Light Green color
+}else if(aqiV.val>100&&aqiV.val<=200) // Moderate
+{
+  aqi.pco=65504 // Yellow color
+}else if(aqiV.val>200&&aqiV.val<=300) // Poor
+{
+  aqi.pco=65024 // Orange color
+}else if(aqiV.val>300&&aqiV.val<=400) // Very Poor
+{
+  aqi.pco=63488 // Red  color
+}else if(aqiV.val>400) // Hazardous
+{
+  aqi.pco=49152 // Severe
+}

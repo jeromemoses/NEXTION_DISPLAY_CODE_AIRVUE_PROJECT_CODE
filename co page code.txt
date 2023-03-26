@@ -1,0 +1,23 @@
+co.val=coV.val
+temp.val=tempV.val
+hum.val=humV.val
+//co
+if(coV.val<=4) // Good
+{
+  co.pco=1418 // Green color
+}else if(coV.val>4&&coV.val<=9) // Satisfactory
+{
+  co.pco=38538 // Light Green color
+}else if(coV.val>9&&coV.val<=12) // Moderate
+{
+  co.pco=65504 // Yellow color
+}else if(coV.val>12&&coV.val<=15) // Poor
+{
+  co.pco=65024 // Orange color
+}else if(coV.val>15&&coV.val<=30) // Very Poor
+{
+  co.pco=63488 // Red  color
+}else if(coV.val>30) // Hazardous
+{
+  co.pco=49152 // Severe
+}

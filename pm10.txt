@@ -1,0 +1,23 @@
+pm10.val=pm10V.val
+temp.val=tempV.val
+hum.val=humV.val
+// PM10 Sensor
+if(pm10V.val<=50) // Good
+{
+  pm10.pco=1418 // Green color
+}else if(pm10V.val>50&&pm10V.val<=100) // Satisfactory
+{
+  pm10.pco=38538 // Light Green color
+}else if(pm10V.val>100&&pm10V.val<=250) // Moderate
+{
+  pm10.pco=65504 // Yellow color
+}else if(pm10V.val>250&&pm10V.val<=350) // Poor
+{
+  pm10.pco=65024 // Orange color
+}else if(pm10V.val>350&&pm10V.val<=430) // Very Poor
+{
+  pm10.pco=63488 // Red  color
+}else if(pm10V.val>430) // Hazardous
+{
+  pm10.pco=49152 // Severe //meroon
+}

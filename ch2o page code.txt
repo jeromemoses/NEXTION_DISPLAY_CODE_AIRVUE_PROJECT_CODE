@@ -1,0 +1,23 @@
+ch2o.val=ch2oV.val
+temp.val=tempV.val
+hum.val=humV.val
+//CH2O Sensor
+if(ch2oV.val<=65) // Good
+{
+  ch2o.pco=1418 // Green color
+}else if(ch2oV.val>65&&ch2oV.val<=220) // Satisfactory
+{
+  ch2o.pco=38538 // Light Green color
+}else if(ch2oV.val>220&&ch2oV.val<=660) // Moderate
+{
+  ch2o.pco=65504 // Yellow color
+}else if(ch2oV.val>660&&ch2oV.val<=2200) // Poor
+{
+  ch2o.pco=65024 // Orange  color
+}else if(ch2oV.val>2200&&ch2oV.val<=5500) // Very Poor
+{
+  ch2o.pco=63488 // Red  color
+}else if(ch2oV.val>5500) // Severe
+{
+  ch2o.pco=49152 // Maroon  color
+}
